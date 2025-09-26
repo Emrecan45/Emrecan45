@@ -1,1 +1,1 @@
-![Freddy](./img/selfi.jpg)
+![Freddy](./selfi.jpg)

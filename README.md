@@ -1,1 +1,1 @@
-![Uploading image.png…]()
+![Freddy](./img/selfi.jpg)

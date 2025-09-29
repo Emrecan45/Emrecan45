@@ -1,1 +1,1 @@
-![fnaf](./selfi.p'ng)
+![fnaf](./selfi.png)

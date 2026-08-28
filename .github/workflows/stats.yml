@@ -1,0 +1,52 @@
+name: stats
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  generate-cards:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch cards
+        run: |
+          set -u
+          fetch() {
+            out="$1"
+            shift
+            for url in "$@"; do
+              code=$(curl -s -L --max-time 45 -o "$out.tmp" -w "%{http_code}" "$url" || echo 000)
+              type=$(file -b --mime-type "$out.tmp" 2>/dev/null || echo unknown)
+              if [ "$code" = "200" ] && head -c 400 "$out.tmp" | grep -qi "<svg"; then
+                mv "$out.tmp" "$out"
+                echo "ok   $out <- $url"
+                return 0
+              fi
+              echo "skip $out <- $url (http $code, $type)"
+            done
+            rm -f "$out.tmp"
+            echo "echec $out : aucune source valide, fichier precedent conserve"
+            return 0
+          }
+
+          STATS_MAIN="https://github-readme-stats-eta-sable-23.vercel.app/api?username=Emrecan45&hide_border=true&show_icons=true"
+          STATS_FALLBACK="https://github-readme-stats.vercel.app/api?username=Emrecan45&hide_border=true&show_icons=true"
+          STREAK_MAIN="https://github-readme-streak-stats-phi-rust.vercel.app?user=Emrecan45&hide_border=true"
+          STREAK_FALLBACK="https://streak-stats.demolab.com?user=Emrecan45&hide_border=true"
+
+          fetch stats/stats-dark.svg  "$STATS_MAIN&theme=catppuccin_mocha"  "$STATS_FALLBACK&theme=catppuccin_mocha"
+          fetch stats/stats-light.svg "$STATS_MAIN&theme=catppuccin_latte"  "$STATS_FALLBACK&theme=catppuccin_latte"
+          fetch stats/streak-dark.svg  "$STREAK_MAIN&theme=catppuccin_mocha" "$STREAK_FALLBACK&theme=catppuccin_mocha"
+          fetch stats/streak-light.svg "$STREAK_MAIN&theme=catppuccin_latte" "$STREAK_FALLBACK&theme=catppuccin_latte"
+
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add stats
+          git commit -m "Update stats cards" || exit 0
+          git push

@@ -7,14 +7,14 @@
 </div>
 <h2 align="center">📊 Stats</h2>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-eta-sable-23.vercel.app/api?username=Emrecan45&theme=catppuccin_mocha&hide_border=true&show_icons=true" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats-eta-sable-23.vercel.app/api?username=Emrecan45&theme=catppuccin_latte&hide_border=true&show_icons=true" />
-  <img src="https://github-readme-stats-eta-sable-23.vercel.app/api?username=Emrecan45&theme=catppuccin_latte&hide_border=true" height="170" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Emrecan45/Emrecan45/refs/heads/main/stats/stats-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Emrecan45/Emrecan45/refs/heads/main/stats/stats-light.svg" />
+  <img src="https://raw.githubusercontent.com/Emrecan45/Emrecan45/refs/heads/main/stats/stats-light.svg" height="170" />
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=Emrecan45&theme=catppuccin_mocha&hide_border=true" />
-  <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=Emrecan45&theme=catppuccin_latte&hide_border=true" />
-  <img src="https://streak-stats.demolab.com?user=Emrecan45&theme=catppuccin_latte&hide_border=true" height="170" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Emrecan45/Emrecan45/refs/heads/main/stats/streak-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Emrecan45/Emrecan45/refs/heads/main/stats/streak-light.svg" />
+  <img src="https://raw.githubusercontent.com/Emrecan45/Emrecan45/refs/heads/main/stats/streak-light.svg" height="170" />
 </picture>
 <!-- <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github-widgetbox.vercel.app/api/profile?username=Emrecan45&data=followers,repositories,stars,commits&theme=darkmode" />

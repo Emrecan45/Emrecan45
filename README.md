@@ -3,7 +3,7 @@
   <a href="https://discord.com/users/1437153255816695889" target="_blank"><img src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
   <a href="https://revolut.me/emrecan45" target="_blank"><img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Donate"></a>
   <a href="https://emrecan45.github.io/" target="_blank"><img src="https://img.shields.io/badge/Website-%23000000.svg?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website"></a>
-  <a href="https://emrecan45.itch.io/" target="_blank"><img src="https://img.shields.io/badge/Itch.io-%23FA5C5C.svg?style=for-the-badge&logo=itch.io&logoColor=white" alt="Itch.io"></a>
+  <a href="https://emrecan45.itch.io/" target="_blank"><img src="https://img.shields.io/badge/Itch.io-FA5C5C?style=for-the-badge&logo=itchdotio&logoColor=white" alt="Itch.io"></a>
 </div>
 <h2 align="center">📊 Stats</h2>
 <picture>
